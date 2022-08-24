@@ -1,12 +1,13 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 public class libros {
     public static void main(String[] args) {
-        ArrayList Libros = new ArrayList();
-        String Mislibros[] = new String[];
-        agregarLibro(Libros,"El Hobbit","J.R.R Tolkien","Ed Planeta");
-        agregarLibro(Libros,"Cujo","Stephen King","Ed. Que Susto");
-        agregarLibro(Libros,"Un Mundo Feliz","Aldous Huxley","Ed. No me acuerdo");
+        String libros[][] = new String[100][3];
+        String misLibros[] = new String[3];
+        agregarLibro(libros,"El Hobbit","J.R.R Tolkien","Ed Planeta");
+        agregarLibro(libros,"Cujo","Stephen King","Ed. Que Susto");
+        agregarLibro(libros,"Un Mundo Feliz","Aldous Huxley","Ed. No me acuerdo");
         menu();
     }
     public static void menu(){
@@ -45,7 +46,7 @@ public class libros {
                     break;
                 case 5:
                     System.out.println("MOSTRAR TODA LA COLECCION");
-                    mostrartlacoleccion();
+                    mostrartLaColeccion();
                     break;
                 case 6:
                     salir=true;
@@ -56,12 +57,13 @@ public class libros {
 
         }
     }
-    public  static String[][] agregarLibro(String misLibros[],String titulo,String autor,String editorial){
+    public  static String[] agregarLibro(String[] misLibros, String titulo, String autor, String editorial){
 
-        return new String[0][];
+        return misLibros;
     }
-    public  static void mostrartlacoleccion(String misLibros[]){
-        System.out.println(misLibros);
+    public  static void mostrartLaColeccion(String misLibros[]){
+
+        System.out.println(Arrays.toString(misLibros));
     }
     public static void mostrarBusquedadeLibroAutor(String misLibros[],String autor){
 
