@@ -1,13 +1,12 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 public class libros {
     public static void main(String[] args) {
-        String libros[][] = new String[100][3];
+        String Libros[][] = new String[100][3];
         String misLibros[] = new String[3];
-        agregarLibro(libros,"El Hobbit","J.R.R Tolkien","Ed Planeta");
-        agregarLibro(libros,"Cujo","Stephen King","Ed. Que Susto");
-        agregarLibro(libros,"Un Mundo Feliz","Aldous Huxley","Ed. No me acuerdo");
+        agregarLibro(Libros,"El Hobbit","J.R.R Tolkien","Ed Planeta");
+        agregarLibro(Libros,"Cujo","Stephen King","Ed. Que Susto");
+        agregarLibro(Libros,"Un Mundo Feliz","Aldous Huxley","Ed. No me acuerdo");
         menu();
     }
     public static void menu(){
@@ -62,10 +61,10 @@ public class libros {
         return misLibros;
     }
     public  static void mostrartLaColeccion(String misLibros[]){
-
-        System.out.println(Arrays.toString(misLibros));
+            System.out.println(Arrays.toString(misLibros));
     }
     public static void mostrarBusquedadeLibroAutor(String misLibros[],String autor){
+
 
     }
     public static int totalLibros(String misLibros[]){
